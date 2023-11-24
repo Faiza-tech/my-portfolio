@@ -1,0 +1,128 @@
+.active {
+    color: blue;
+}
+
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 30px;
+    background-color: #333;
+    position: sticky;
+    /*nav need on top when scrool*/
+    top: 0;
+
+}
+
+.nav-link {
+    /*if we not give here class " nav-link" then " ul" */
+    display: flex;
+
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    margin: 0.5rem;
+    /*  text-decoration: none;*/
+}
+
+.nav-link li {
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+.nav-link li a {
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1.5px;
+    /*we cant see when we :hover then can see or an .active link*/
+}
+
+.nav-link li a:hover {
+    /** background-color: blue;**/
+    padding: 10px;
+    border-bottom: 2px solid green;
+}
+
+.hamburger {
+    display: none;
+}
+
+/**********************************/
+
+/*@media screen and (max-width : 850px) {
+   .nav-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    z-index: -3;
+    transition: 0.3s;
+}
+
+.nav-link li{
+    padding: 20px 0px;
+}
+.nav-link li a{
+   font-size: 30px;
+   font-weight: 500;
+  
+}
+.hamburger{
+    display:initial;
+}
+
+
+
+.logo{
+    color: white;
+  display: initial;
+}
+   }
+
+   @media screen and (max-width : 1040px) {
+    .logo{
+        color: white;
+      display: initial;
+    }
+   }
+*/
+
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-link {
+     
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+    }
+
+    nav .nav-link.active {
+        display: flex;
+    }
+
+    .nav-link li {
+        margin: 10px 0;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
